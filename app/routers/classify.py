@@ -3,15 +3,16 @@ from ..schemas import EmailRequest, ClassificationResponse
 import sys
 import os
 
-# Add parent directory to path to import local modules (hybrid_inference, category_inference)
+# Add parent directory to path to import local modules
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 try:
-    from hybrid_inference import HybridUrgencyClassifier
+    # Use rule-based urgency classifier instead of hybrid ML model
+    from ..rule_based_urgency import RuleBasedUrgencyClassifier
     from app.category_inference import CategoryClassifier
     
     # Initialize Classifiers (Global instance to avoid reloading)
-    urgency_classifier = HybridUrgencyClassifier()
+    urgency_classifier = RuleBasedUrgencyClassifier()
     category_classifier = CategoryClassifier()
     
 except ImportError as e:
