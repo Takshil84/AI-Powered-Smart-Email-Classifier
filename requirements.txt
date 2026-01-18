@@ -9,3 +9,5 @@ pandas
 scikit-learn
 tqdm
 jinja2
+gunicorn
+
