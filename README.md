@@ -1,5 +1,8 @@
 # AI-Powered-Smart-Email-Classifier
 AI Powered Smart Email Classifier for Enterprises
+
+Live Link :- https://enterprise-ai-smart-email-classifier.onrender.com
+
 ## Milestone 1: Data Collection & Preprocessing
 
 ---
@@ -221,3 +224,65 @@ python hybrid_inference.py
 ```
 
 ---
+## Milestone 4: Dashboard & Deployment
+
+---
+
+## Overview
+
+Milestone 4 focused on delivering an enterprise-ready solution by building a comprehensive **React Frontend Dashboard**, integrating it with a **FastAPI Backend**, and containerizing the entire application for deployment.
+
+## What I Did
+
+### 1. Interactive Dashboard (React + Material UI)
+Built a responsive, multi-page web application:
+- **Analysis Page**: Real-time email classification and urgency scoring for user input.
+- **History Page**: Searchable table of past analyses with filters (Category, Urgency, Date) and generic CSV export.
+- **Analytics Page**: Visual dashboard with charts (Pie, Bar) showing urgency distribution and category trends.
+- **Split-View Design**: Optimized layouts for full-screen utilization on desktop while remaining mobile-responsive.
+
+### 2. Backend Integration (FastAPI)
+Developed a robust Python backend to serve models and data:
+- **API Endpoints**: `/analyze` for inference, `/history` for data retrieval.
+- **Data Persistence**: Local storage implementation for history tracking.
+- **CORS Support**: Configured for seamless frontend-backend communication.
+
+### 3. Split-Stack Deployment Architecture
+Implemented a modern "Split Deployment" strategy to leverage the best usage:
+- **Backend (Hugging Face Spaces)**: Hosts the Dockerized FastAPI application + Models (High RAM availability).
+- **Frontend (Render)**: Hosts the React application as a global Static Site (CDN performance).
+- **Interconnectivity**: Configured `VITE_API_URL` environment variables to enable secure Cross-Origin Resource Sharing (CORS) between the two distinct platforms.
+
+## Files Created (Milestone 4)
+- `frontend/`: Complete React project source code.
+- `app/main.py`: FastAPI backend application.
+- `Dockerfile`: Production-ready container configuration.
+- `requirements.txt`: Python dependencies.
+
+## Usage (Milestone 4)
+
+**Run via Docker (Recommended):**
+```bash
+docker build -t email-classifier .
+docker run -p 7860:7860 email-classifier
+```
+
+**Run Locally:**
+```bash
+# Terminal 1: Backend
+uvicorn app.main:app --reload --port 7860
+
+# Terminal 2: Frontend
+cd frontend
+npm run dev
+```
+
+---
+
+
+## Status
+
+**Milestone 1**: ✅ Complete
+**Milestone 2**: ✅ Complete
+**Milestone 3**: ✅ Complete
+**Milestone 4**: ✅ Complete
