@@ -5,7 +5,7 @@ from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassific
 from sklearn.metrics import accuracy_score, f1_score
 
 # 1. Configuration
-DATASET_PATH = r"C:\Users\mahan\Desktop\Infosys\Datset\Urgency_Dataset\Cleaned_Dataset\merged_3class_urgency.csv"
+DATASET_PATH = r"C:\Users\taksh\Desktop\Infosys\Datset\Urgency_Dataset\Cleaned_Dataset\merged_3class_urgency.csv"
 MODEL_NAME = "distilbert-base-uncased"
 OUTPUT_DIR = "./final_urgency_model"
 NUM_LABELS = 3
