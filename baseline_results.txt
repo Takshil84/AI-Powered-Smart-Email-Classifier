@@ -1,0 +1,42 @@
+Loading dataset...
+Dataset loaded. Total rows: 3315
+Preprocessing messages (Tokenization, Stopword removal, Lemmatization)...
+Splitting data into training and testing sets...
+Extracting TF-IDF features...
+
+Training Logistic Regression model...
+
+Logistic Regression Results:
+Accuracy: 0.9804
+5-Fold Stratified CV Accuracy: 0.9808 (+/- 0.0151)
+Classification Report:
+              precision    recall  f1-score   support
+
+   complaint       0.95      0.99      0.97       140
+   promotion       0.97      1.00      0.98       115
+     request       0.99      0.96      0.98       140
+social_media       1.00      0.97      0.99       140
+        spam       0.99      0.98      0.98       128
+
+    accuracy                           0.98       663
+   macro avg       0.98      0.98      0.98       663
+weighted avg       0.98      0.98      0.98       663
+
+
+Training Naive Bayes model...
+
+Naive Bayes Results:
+Accuracy: 0.9774
+5-Fold Stratified CV Accuracy: 0.9770 (+/- 0.0207)
+Classification Report:
+              precision    recall  f1-score   support
+
+   complaint       0.95      0.99      0.97       140
+   promotion       0.97      1.00      0.99       115
+     request       0.98      0.96      0.97       140
+social_media       0.99      0.98      0.99       140
+        spam       1.00      0.96      0.98       128
+
+    accuracy                           0.98       663
+   macro avg       0.98      0.98      0.98       663
+weighted avg       0.98      0.98      0.98       663
