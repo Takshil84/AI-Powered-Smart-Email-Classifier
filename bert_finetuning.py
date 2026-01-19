@@ -20,7 +20,7 @@ from tqdm import tqdm
 ## CONFIGURATION
 DEVICE = torch.device("cpu")  # Force CPU for Windows stability
 MODEL_NAME = "distilbert-base-uncased"
-DATASET_PATH = r"C:\Users\mahan\Desktop\Infosys\Datset\Classification_Dataset\cleaned_Dataset\merged_cleaned_dataset.csv"
+DATASET_PATH = r"C:\Users\taksh\Desktop\Infosys\Datset\Classification_Dataset\cleaned_Dataset\merged_cleaned_dataset.csv"
 OUTPUT_DIR = "./final_bert_model"
 
 BATCH_SIZE = 8
