@@ -21,7 +21,7 @@ except Exception as e:
     print(f"Warning: NLTK download failed: {e}")
 
 # Path to the dataset
-dataset_path = r'c:\Users\mahan\Desktop\Infosys\Datset\Classification_Dataset\cleaned_Dataset\merged_cleaned_dataset.csv'
+dataset_path = r'c:\Users\taksh\Desktop\Infosys\Datset\Classification_Dataset\cleaned_Dataset\merged_cleaned_dataset.csv'
 
 def preprocess_text(text):
     if not isinstance(text, str):
